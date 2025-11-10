@@ -34,7 +34,7 @@ const App: React.FC = () => {
 
   const { width } = useWindowSize();
   const isMobile = width < 600;
-  const isTablet = width >= 600 && width < 900;
+  //const isTablet = width >= 600 && width < 900;
 
   const severityColors: Record<string, string> = {
     High: '#FF4C4C',
