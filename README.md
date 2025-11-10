@@ -1,2 +1,2 @@
 # soc-alerts
-Self-taught project: Python + React SOC dashboard for Minning safety operation.
+Self-taught project: Python(Flask) + React SOC dashboard for Minning.
