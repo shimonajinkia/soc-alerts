@@ -1,7 +1,6 @@
-from fastapi import FastAPI
+from app import create_app
 
-app = FastAPI()
+app = create_app()
 
-@app.get("/")
-def read_root():
-    return {"message": "Backend is Running"}
+if __name__ == "__main__":
+    app.run(debug=True)

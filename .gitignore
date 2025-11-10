@@ -1,0 +1,74 @@
+# ============================
+# FRONTEND (React + TypeScript)
+# ============================
+
+# Node modules
+frontend/node_modules/
+
+# Build output
+frontend/build/
+frontend/dist/
+
+# Environment variables
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/.env.test.local
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Typescript
+frontend/*.tsbuildinfo
+
+# ============================
+# BACKEND (Flask + Python)
+# ============================
+
+# Virtual env
+backend/venv/
+backend/env/
+backend/.venv/
+
+# Python cache
+backend/__pycache__/
+backend/**/*.pyc
+backend/**/*.pyo
+backend/**/*.pyd
+
+# Flask instance folder (sessions, uploads, sqlite db)
+backend/instance/
+
+# Environment / secrets
+backend/.env
+backend/*.env
+backend/config.json
+backend/secret.json
+
+# Local databases
+backend/*.db
+backend/*.sqlite3
+
+# Logs
+backend/*.log
+
+# ============================
+# COMMON / GLOBAL
+# ============================
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# PyCharm project files
+*.iml
+
+# Serialized data / cache
+*.cache
