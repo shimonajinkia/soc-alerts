@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/soc-alerts/',  // <-- your repo name
+  base: '/soc-alerts/',  // must match your repo name
 });
