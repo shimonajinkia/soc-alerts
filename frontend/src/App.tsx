@@ -34,7 +34,6 @@ const App: React.FC = () => {
 
   const { width } = useWindowSize();
   const isMobile = width < 600;
-  //const isTablet = width >= 600 && width < 900;
 
   const severityColors: Record<string, string> = {
     High: '#FF4C4C',
@@ -42,9 +41,12 @@ const App: React.FC = () => {
     Low: '#4CAF50',
   };
 
+  // Use environment variable for backend
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+
   const fetchAlerts = async () => {
     try {
-      const res = await fetch('/api/alerts');
+      const res = await fetch(`${BACKEND_URL}/api/alerts`);
       const data: Alert[] = await res.json();
       setAlerts(data);
     } catch (err) {
@@ -61,7 +63,7 @@ const App: React.FC = () => {
   const addAlert = async () => {
     try {
       const newAlert = { type, severity, description };
-      await fetch('/api/alerts', {
+      await fetch(`${BACKEND_URL}/api/alerts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newAlert),
